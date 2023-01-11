@@ -20,6 +20,8 @@ def send():
             os.chdir(comlis[1])
         except:
             pass
+    elif command == 'clear':
+        historys=''
     var=os.popen(command).read()
     historys=command+'\n'+var+'\n'+historys+'\n'
     finalcom = historys.replace('\n', '<br>')
