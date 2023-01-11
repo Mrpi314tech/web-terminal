@@ -1,0 +1,41 @@
+<body style="background-color:lightblue;">
+
+<html>
+  <head>
+    <title>Terminal</title>
+  </head>
+  <body>
+    <h1>Web-Based terminal</h1>
+    <img src="https://raw.githubusercontent.com/Mrpi314tech/UC37software/main/images/HowTo.jpg" alt="HowTo">
+    <div style="background-color:red; width: 250px;">
+      <p>{{cwdp}}</p>
+    </div>
+    <form action="/run" method="post">
+      <input type="text" name="command">
+      <input type="submit" value="Run">
+    </form>
+    <h2>Output:</h2>
+    <div style="overflow: auto; width: 200px; height: 200px; background-color:cyan;">
+      {% if command %}
+        {% autoescape false %}
+            {{command}}
+        {% endautoescape %}
+      {% endif %}
+    </div>
+      <h2>Basic commands:</h2>
+      pwd - displays the current working directory<br>
+      cd - change the current working directory<br>
+      ls - list the files and directories in the current working directory<br>
+      mkdir - create a new directory<br>
+      touch - create a new file<br>
+      cp - copy a file or directory<br>
+      mv - move a file or directory<br>
+      rm - delete a file or directory<br>
+      chmod - change the permissions of a file or directory<br>
+      echo - display a message on the terminal<br>
+      cat - display the contents of a file<br>
+      grep - search for a specific pattern in a file or multiple files<br>
+      find - search for files and directories based on certain criteria<br>
+      wc - display the number of lines, words, and characters in a file<br>
+  </body>
+</html>
